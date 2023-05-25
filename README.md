@@ -1,4 +1,3 @@
-# my-portfolio
 
 # Projeto criado para exibir alguns dos meus projetos.
 
