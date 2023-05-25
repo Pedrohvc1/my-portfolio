@@ -9,8 +9,8 @@ const Banner = () => {
   const [text, setText] = useState("");
   const [, setIndex] = useState(1);
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = ["Software Engineer", "Software Developer"];
-  const period = 2000;
+  const toRotate = ["Software Engineer", "Software Developer", "Data Analytics"];
+  const period = 1500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -44,7 +44,7 @@ const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(100);//tempo do loop
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
@@ -64,7 +64,7 @@ const Banner = () => {
             </h1>
             <p>descrição sobre mim</p>
             <button onClick={() => console.log("tst")}>
-              Fale comigo <ArrowRightCircle size={25} />
+              Fale comigo <ArrowRightCircle size={25}/>
             </button>
           </Col>
           <Col xs={12} md={6} xl={5}>
