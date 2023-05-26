@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
-// import 'animate.css';
-// import TrackVisibility from 'react-on-screen';
 
 const Contact = () => {
   const formInitialDetails = {
@@ -13,7 +11,7 @@ const Contact = () => {
     message: "",
   };
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Send");
+  const [buttonText, setButtonText] = useState("Enviar");
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
@@ -23,9 +21,9 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setButtonText("Sending...");
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+    setButtonText("Enviando...");
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
